@@ -84,10 +84,12 @@ Tablolar: `profiles`, `addresses`, `chef_profiles`, `chef_photos`, `chef_availab
 | Tarih | Yapılan |
 |---|---|
 | 2026-10-31 | Ürün kararları netleşti, teknoloji seçildi (Flutter + Supabase), ilk DB şeması yazıldı, repo kuruldu. |
+| 2026-10-31 | Flutter iskeleti eklendi: Riverpod + go_router + supabase_flutter, Türkçe yerelleştirme, müşteri/şef modu geçişli alt menü (ekranlar şimdilik yer tutucu). Platform klasörleri yerelde `flutter create .` ile üretilecek (bkz. `app/README.md`). |
 
 ## 8. Yapılacaklar
 
-- [ ] Flutter projesini oluştur (`app/`)
+- [x] Flutter projesini oluştur (`app/`)
+- [ ] Supabase projesini aç, şemayı uygula
 - [ ] RLS politikaları
 - [ ] Puan / tamamlanma oranı trigger'ları
 - [ ] Kayıt / giriş ekranları
