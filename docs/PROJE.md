@@ -62,7 +62,9 @@ Başlangıç: **Ankara ve İstanbul**.
 Tek uygulama. Herkes müşteri olarak kayıt olur; "Şef ol" ile başvurur, onaylanınca şef rolü eklenir. Profil menüsünden **şef modu / müşteri modu** geçişi.
 
 - Müşteri sekmeleri: Keşfet · Siparişlerim · Mesajlar · Hesabım
-- Şef sekmeleri: Talepler · Takvim · Menülerim · Kazançlar · Mesajlar
+- Şef sekmeleri: Talepler · Takvim · Menülerim · Mesajlar · Hesabım (Kazançlar, Hesabım altına taşındı; alt menü 5 sekmeyle sınırlı)
+- Mod geçişi sadece onaylı şeflerde görünür; diğerlerinde "Şef ol" çıkar.
+- Giriş: e-posta + şifre (Google/Apple girişi sonra eklenecek).
 
 ## 5. Repo Yapısı
 
@@ -75,7 +77,21 @@ yesChef/
 
 ## 6. Veritabanı
 
-İlk şema: `supabase/migrations/20261031000000_initial_schema.sql`
+Migration'lar sırayla uygulanır (`supabase/migrations/`):
+
+1. `20261031000000_initial_schema.sql` — tablolar, enum'lar, indeksler
+2. `20261031000001_auth_and_rls.sql` — kayıtta otomatik profil, RLS politikaları, yetki korumaları, mesajlar için Realtime
+
+Güvenlik ilkeleri:
+- Kullanıcı kendi `is_chef` / `is_admin` bayrağını değiştiremez; şef kendi durumunu ve istatistiklerini değiştiremez (trigger ile korunur).
+- Şef başvurusu `pending` olarak oluşur, admin `active` yapınca `is_chef` otomatik açılır.
+- Sipariş, ödeme ve iptal işlemleri istemciden değil Edge Function üzerinden yapılır; istemci sadece okur.
+
+### Supabase kurulumu
+1. Yeni proje, bölge **Frankfurt (eu-central-1)**.
+2. SQL Editor'da migration'ları sırayla çalıştır.
+3. Project Settings → API'den URL ve anon key'i `app/env.json`'a yaz.
+4. İlk admin: kendi hesabınla kayıt ol, SQL Editor'da `update profiles set is_admin = true where id = '<kullanıcı-id>';`
 
 Tablolar: `profiles`, `addresses`, `chef_profiles`, `chef_photos`, `chef_availability`, `chef_blocked_dates`, `menus`, `menu_items`, `custom_requests`, `quotes`, `orders`, `payments`, `chef_cancellations`, `chef_sanctions`, `reviews`, `conversations`, `messages`.
 
@@ -85,12 +101,16 @@ Tablolar: `profiles`, `addresses`, `chef_profiles`, `chef_photos`, `chef_availab
 |---|---|
 | 2026-10-31 | Ürün kararları netleşti, teknoloji seçildi (Flutter + Supabase), ilk DB şeması yazıldı, repo kuruldu. |
 | 2026-10-31 | Flutter iskeleti eklendi: Riverpod + go_router + supabase_flutter, Türkçe yerelleştirme, müşteri/şef modu geçişli alt menü (ekranlar şimdilik yer tutucu). Platform klasörleri yerelde `flutter create .` ile üretilecek (bkz. `app/README.md`). |
+| 2026-10-31 | Kayıt/giriş ekranı (e-posta + şifre), oturuma göre yönlendirme, Hesabım sayfası (mod geçişi, Şef ol, çıkış). RLS ve yetki koruma migration'ı yazıldı. |
 
 ## 8. Yapılacaklar
 
 - [x] Flutter projesini oluştur (`app/`)
-- [ ] Supabase projesini aç, şemayı uygula
-- [ ] RLS politikaları
+- [ ] Supabase projesini aç, migration'ları uygula
+- [x] RLS politikaları
+- [x] Kayıt / giriş ekranları
 - [ ] Puan / tamamlanma oranı trigger'ları
-- [ ] Kayıt / giriş ekranları
+- [ ] Şef başvuru ekranı
+- [ ] Keşfet ve şef profili ekranları
+- [ ] Google / Apple girişi
 - [ ] Ödeme sağlayıcı seçimi (iyzico vs PayTR)

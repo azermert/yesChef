@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/app_mode.dart';
+import '../account/account_page.dart';
 import '../placeholder_page.dart';
 
 class _Tab {
@@ -15,15 +16,15 @@ const _customerTabs = [
   _Tab('Keşfet', Icons.search, PlaceholderPage('Keşfet')),
   _Tab('Siparişlerim', Icons.receipt_long, PlaceholderPage('Siparişlerim')),
   _Tab('Mesajlar', Icons.chat_bubble_outline, PlaceholderPage('Mesajlar')),
-  _Tab('Hesabım', Icons.person_outline, PlaceholderPage('Hesabım', showModeSwitch: true)),
+  _Tab('Hesabım', Icons.person_outline, AccountPage()),
 ];
 
 const _chefTabs = [
   _Tab('Talepler', Icons.inbox_outlined, PlaceholderPage('Talepler')),
   _Tab('Takvim', Icons.calendar_month_outlined, PlaceholderPage('Takvim')),
   _Tab('Menülerim', Icons.restaurant_menu, PlaceholderPage('Menülerim')),
-  _Tab('Kazançlar', Icons.account_balance_wallet_outlined, PlaceholderPage('Kazançlar')),
-  _Tab('Mesajlar', Icons.chat_bubble_outline, PlaceholderPage('Mesajlar', showModeSwitch: true)),
+  _Tab('Mesajlar', Icons.chat_bubble_outline, PlaceholderPage('Mesajlar')),
+  _Tab('Hesabım', Icons.person_outline, AccountPage()),
 ];
 
 /// Moda göre (müşteri / şef) alt menüyü değiştiren ana iskelet.
