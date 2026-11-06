@@ -1,0 +1,31 @@
+# yesChef — İlerleme
+
+> Yapılanlar, yapılacaklar ve ertelenenler. Her iş bittiğinde güncellenir.
+
+## Yapıldı
+
+| Tarih | İş | Not |
+|---|---|---|
+| 2026-10-31 | GitHub reposu kuruldu | `azermert/yesChef` |
+| 2026-10-31 | İlk veritabanı şeması | `supabase/migrations/20261031000000_initial_schema.sql` — kullanıcılar, şef profilleri, menüler, talepler, teklifler, siparişler, ödemeler, iptaller, yorumlar, mesajlar. Henüz Supabase'e uygulanmadı. |
+| 2026-10-31 | Yetki kuralları (RLS) | `supabase/migrations/20261031000001_auth_and_rls.sql` — henüz Supabase'e uygulanmadı. |
+| 2026-10-31 | Flutter iskeleti | Alt menü, şef / müşteri modu geçişi. Ekranlar boş (yer tutucu). |
+| 2026-10-31 | E-posta + şifre giriş ekranı | Kodda duruyor, şu an kullanılmıyor. |
+| 2026-11-06 | Uygulama emülatörde ilk kez çalıştı | Android Studio snap güncellemesinden sonra Flutter JDK'yı bulamadı. Çözüm: `flutter config --jdk-dir=/snap/android-studio/current/jbr` |
+| 2026-11-06 | Giriş zorunluluğu kaldırıldı | Uygulama direkt ana ekrana açılıyor. |
+| 2026-11-06 | Karar ve ilerleme dokümanları | `docs/KARARLAR.md`, `docs/ILERLEME.md`. Eski `docs/PROJE.md` bu ikisine bölündü. |
+
+## Sırada
+
+- [ ] Keşfet ve şef profili ekranlarını konuşmak (ne gösterilecek, nasıl filtrelenecek)
+
+## Ertelendi
+
+| İş | Neden / Ne zaman |
+|---|---|
+| Google ile giriş | Giriş şimdilik gerekli değil, sonra eklenecek. |
+| Arayüz tasarımı | Şu anki görünüm kötü; işlevler oturunca toparlanacak. |
+| Ödeme entegrasyonu | Yönteme sonra karar verilecek. |
+| Supabase'e şemanın uygulanması | Ekranlar netleşince; şema da değişebilir. |
+| Şef başvuru ve admin onay süreci | Sonra konuşulacak. |
+| Puan / iptal oranı hesaplamaları | Sipariş akışı netleşince. |

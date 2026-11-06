@@ -3,4 +3,5 @@
 Müşterileri özel şeflerle buluşturan mobil uygulama.
 
 - Flutter + Supabase
-- Proje dokümanı: [docs/PROJE.md](docs/PROJE.md)
+- Kararlar: [docs/KARARLAR.md](docs/KARARLAR.md)
+- İlerleme: [docs/ILERLEME.md](docs/ILERLEME.md)
