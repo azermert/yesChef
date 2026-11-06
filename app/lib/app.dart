@@ -9,13 +9,15 @@ import 'core/theme.dart';
 import 'features/auth/auth_page.dart';
 import 'features/shell/home_shell.dart';
 
+/// Giriş şimdilik zorunlu değil; Google ile giriş eklenince açılacak.
+const _requireLogin = false;
+
 final routerProvider = Provider<GoRouter>((ref) {
   final auth = ref.watch(authNotifierProvider);
   return GoRouter(
     refreshListenable: auth,
     redirect: (context, state) {
-      // Supabase ayarlı değilse girişi atla (arayüz geliştirme için).
-      if (!Env.isConfigured) return null;
+      if (!_requireLogin || !Env.isConfigured) return null;
       final atLogin = state.matchedLocation == '/giris';
       if (!auth.isLoggedIn) return atLogin ? null : '/giris';
       if (atLogin) return '/';

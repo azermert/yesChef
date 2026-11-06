@@ -64,7 +64,7 @@ Tek uygulama. Herkes müşteri olarak kayıt olur; "Şef ol" ile başvurur, onay
 - Müşteri sekmeleri: Keşfet · Siparişlerim · Mesajlar · Hesabım
 - Şef sekmeleri: Talepler · Takvim · Menülerim · Mesajlar · Hesabım (Kazançlar, Hesabım altına taşındı; alt menü 5 sekmeyle sınırlı)
 - Mod geçişi sadece onaylı şeflerde görünür; diğerlerinde "Şef ol" çıkar.
-- Giriş: e-posta + şifre (Google/Apple girişi sonra eklenecek).
+- Giriş: şimdilik **zorunlu değil**, uygulama direkt ana ekrana açılır. İleride Google (ve iOS için Apple) ile giriş eklenecek. E-posta/şifre ekranı kodda duruyor ama kullanılmıyor (`app.dart` → `_requireLogin`).
 
 ## 5. Repo Yapısı
 
@@ -102,15 +102,15 @@ Tablolar: `profiles`, `addresses`, `chef_profiles`, `chef_photos`, `chef_availab
 | 2026-10-31 | Ürün kararları netleşti, teknoloji seçildi (Flutter + Supabase), ilk DB şeması yazıldı, repo kuruldu. |
 | 2026-10-31 | Flutter iskeleti eklendi: Riverpod + go_router + supabase_flutter, Türkçe yerelleştirme, müşteri/şef modu geçişli alt menü (ekranlar şimdilik yer tutucu). Platform klasörleri yerelde `flutter create .` ile üretilecek (bkz. `app/README.md`). |
 | 2026-10-31 | Kayıt/giriş ekranı (e-posta + şifre), oturuma göre yönlendirme, Hesabım sayfası (mod geçişi, Şef ol, çıkış). RLS ve yetki koruma migration'ı yazıldı. |
+| 2026-11-06 | Uygulama emülatörde ilk kez çalıştı. Giriş zorunluluğu kaldırıldı (erken bulundu); Google ile giriş sonra. Not: Android Studio snap güncellemesi sonrası Flutter JDK'yı bulamadı → `flutter config --jdk-dir=/snap/android-studio/current/jbr` ile çözüldü. |
 
 ## 8. Yapılacaklar
 
 - [x] Flutter projesini oluştur (`app/`)
 - [ ] Supabase projesini aç, migration'ları uygula
 - [x] RLS politikaları
-- [x] Kayıt / giriş ekranları
+- [ ] Google ile giriş (sonra)
 - [ ] Puan / tamamlanma oranı trigger'ları
 - [ ] Şef başvuru ekranı
 - [ ] Keşfet ve şef profili ekranları
-- [ ] Google / Apple girişi
 - [ ] Ödeme sağlayıcı seçimi (iyzico vs PayTR)

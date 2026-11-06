@@ -21,8 +21,8 @@ class AccountPage extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text('Profil yüklenemedi: $e')),
         data: (p) {
-          // Supabase ayarlı değilse (geliştirme), mod geçişini serbest bırak.
-          final canBeChef = p?.isChef ?? !Env.isConfigured;
+          // Giriş yapılmamışsa (geliştirme aşaması) mod geçişi serbest.
+          final canBeChef = p?.isChef ?? true;
           return ListView(
             children: [
               ListTile(
@@ -47,7 +47,7 @@ class AccountPage extends ConsumerWidget {
                     const SnackBar(content: Text('Şef başvurusu yakında.')),
                   ),
                 ),
-              if (Env.isConfigured)
+              if (email != null)
                 ListTile(
                   leading: const Icon(Icons.logout),
                   title: const Text('Çıkış yap'),
