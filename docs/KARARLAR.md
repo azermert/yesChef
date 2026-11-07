@@ -27,6 +27,17 @@
 | Ü9 | Şef profilinde özgeçmiş / hakkımda alanı bulunur. | 2026-10-31 |
 | Ü10 | Pazar: başlangıçta Ankara ve İstanbul. | 2026-10-31 |
 
+### Keşfet Ekranı
+
+| # | Karar | Tarih |
+|---|---|---|
+| K1 | Uygulama açılınca müşteri Keşfet ekranını görür. Ekranda yemekler değil **şefler** öne çıkar (iş kişiye güvene dayanır, özel talepte hazır yemek yoktur). | 2026-11-07 |
+| K2 | Üstte şehir/ilçe seçimi ve arama çubuğu ("şef veya yemek ara") bulunur. | 2026-11-07 |
+| K3 | Altında hızlı kategoriler yer alır (mutfak türü ve/veya ne için arandığı: günlük, davet, özel gün). | 2026-11-07 |
+| K4 | Şefler bölümler halinde listelenir: Yakınındaki şefler · En yüksek puanlılar · Yeni katılanlar. | 2026-11-07 |
+| K5 | Şef kartında şunlar yer alır: fotoğraf, ad, ilçe, puan, mutfak türleri, "kişi başı ₺X'den başlayan" fiyat ve çalışma şekli simgeleri (evine gelir / getirir / gel al). | 2026-11-07 |
+| K6 | Karta tıklayınca şef profili açılır. Menüden sipariş ve özel talep profilden başlar. | 2026-11-07 |
+
 ## 3. Ödeme ve İptal
 
 | # | Karar | Tarih |
