@@ -20,7 +20,7 @@
 ## Sırada
 
 - [x] Keşfet ekranı kararları (K1–K9)
-- [ ] Keşfet ekranını emülatörde test etmek
+- [x] Keşfet ekranını emülatörde test etmek (ilk migration eksikti, yeniden çalıştırılınca düzeldi)
 - [ ] Şef profili ekranını konuşmak
 
 ## Ertelendi
