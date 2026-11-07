@@ -13,11 +13,14 @@
 | 2026-10-31 | E-posta + şifre giriş ekranı | Kodda duruyor, şu an kullanılmıyor. |
 | 2026-11-06 | Uygulama emülatörde ilk kez çalıştı | Android Studio snap güncellemesinden sonra Flutter JDK'yı bulamadı. Çözüm: `flutter config --jdk-dir=/snap/android-studio/current/jbr` |
 | 2026-11-06 | Giriş zorunluluğu kaldırıldı | Uygulama direkt ana ekrana açılıyor. |
+| 2026-11-07 | Keşfet ekranı (K1–K8) | Branch: `feature/kesfet`. Konum seçimi, arama, kategori çipleri, filtreler, sıralama, 3 bölüm (yakınındaki / en yüksek puan / yeni). Filtre ve sıralama Supabase'de `discover_chefs` fonksiyonunda. Kart tıklanınca şef profili yer tutucusu açılır. |
+| 2026-11-07 | Migration 3 ve test verisi | `20261107000000_discover.sql`: şefe `district` alanı, Keşfet fonksiyonu, koruma trigger'larında düzeltme (SQL Editor'dan yapılan güncellemeleri engelliyordu). `supabase/seed.sql`: 8 test şefi ve menüleri. |
 | 2026-11-06 | Karar ve ilerleme dokümanları | `docs/KARARLAR.md`, `docs/ILERLEME.md`. Eski `docs/PROJE.md` bu ikisine bölündü. |
 
 ## Sırada
 
 - [x] Keşfet ekranı kararları (K1–K9)
+- [x] Keşfet ekranını emülatörde test etmek (ilk migration eksikti, yeniden çalıştırılınca düzeldi)
 - [ ] Şef profili ekranını konuşmak
 
 ## Ertelendi
@@ -30,4 +33,6 @@
 | Supabase'e şemanın uygulanması | Ekranlar netleşince; şema da değişebilir. |
 | Şef başvuru ve admin onay süreci | Sonra konuşulacak. |
 | Keşfet'te tarih ve kişi sayısı filtreleri | Şef takvimi gerektiriyor; ilk sürümden sonra (K9). |
-| Puan / iptal oranı hesaplamaları | Sipariş akışı netleşince. |
+| Puan / iptal oranı hesaplamaları | Sipariş akışı netleşince. Test şeflerinde puanlar elle girildi. |
+| Telefon konumu (GPS) ile "yakınındaki" | Şimdilik "yakın" = seçilen ilçe şefin ilçesi veya hizmet bölgesi içinde. Konum izni sonra. |
+| Ne için aranıyor kategorileri (günlük / davet / özel gün) | Şef verisinde bu bilgi yok; şimdilik kategoriler mutfak türü. |
