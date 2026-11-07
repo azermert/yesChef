@@ -7,6 +7,7 @@ import 'core/env.dart';
 import 'core/supabase.dart';
 import 'core/theme.dart';
 import 'features/auth/auth_page.dart';
+import 'features/chef_profile/chef_profile_page.dart';
 import 'features/shell/home_shell.dart';
 
 /// Giriş şimdilik zorunlu değil; Google ile giriş eklenince açılacak.
@@ -26,6 +27,10 @@ final routerProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(path: '/', builder: (context, state) => const HomeShell()),
       GoRoute(path: '/giris', builder: (context, state) => const AuthPage()),
+      GoRoute(
+        path: '/sef/:id',
+        builder: (context, state) => ChefProfilePage(chefId: state.pathParameters['id']!),
+      ),
     ],
   );
 });

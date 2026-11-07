@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/app_mode.dart';
 import '../account/account_page.dart';
+import '../discover/discover_page.dart';
 import '../placeholder_page.dart';
 
 class _Tab {
@@ -13,7 +14,7 @@ class _Tab {
 }
 
 const _customerTabs = [
-  _Tab('Keşfet', Icons.search, PlaceholderPage('Keşfet')),
+  _Tab('Keşfet', Icons.search, DiscoverPage()),
   _Tab('Siparişlerim', Icons.receipt_long, PlaceholderPage('Siparişlerim')),
   _Tab('Mesajlar', Icons.chat_bubble_outline, PlaceholderPage('Mesajlar')),
   _Tab('Hesabım', Icons.person_outline, AccountPage()),
