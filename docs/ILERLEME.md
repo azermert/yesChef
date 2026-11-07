@@ -17,7 +17,8 @@
 
 ## Sırada
 
-- [ ] Keşfet ve şef profili ekranlarını konuşmak (ne gösterilecek, nasıl filtrelenecek)
+- [x] Keşfet ekranı kararları (K1–K9)
+- [ ] Şef profili ekranını konuşmak
 
 ## Ertelendi
 
@@ -28,4 +29,5 @@
 | Ödeme entegrasyonu | Yönteme sonra karar verilecek. |
 | Supabase'e şemanın uygulanması | Ekranlar netleşince; şema da değişebilir. |
 | Şef başvuru ve admin onay süreci | Sonra konuşulacak. |
+| Keşfet'te tarih ve kişi sayısı filtreleri | Şef takvimi gerektiriyor; ilk sürümden sonra (K9). |
 | Puan / iptal oranı hesaplamaları | Sipariş akışı netleşince. |

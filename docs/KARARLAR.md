@@ -37,6 +37,9 @@
 | K4 | Şefler bölümler halinde listelenir: Yakınındaki şefler · En yüksek puanlılar · Yeni katılanlar. | 2026-11-07 |
 | K5 | Şef kartında şunlar yer alır: fotoğraf, ad, ilçe, puan, mutfak türleri, "kişi başı ₺X'den başlayan" fiyat ve çalışma şekli simgeleri (evine gelir / getirir / gel al). | 2026-11-07 |
 | K6 | Karta tıklayınca şef profili açılır. Menüden sipariş ve özel talep profilden başlar. | 2026-11-07 |
+| K7 | Filtreler (arama çubuğu yanındaki "Filtrele" butonunda): mutfak türü · hizmet şekli (evime gelsin / getirsin / gidip alayım) · malzeme (ben alırım / şef alsın) · sipariş tipi (hazır menü / özel talep) · kişi başı fiyat aralığı. | 2026-11-07 |
+| K8 | Sıralama: Önerilen (varsayılan; puan, yakınlık ve tamamlanma oranının karışımı) · En yüksek puan · En yakın · En düşük fiyat. | 2026-11-07 |
+| K9 | Tarih ("o gün müsait olanlar") ve kişi sayısı filtreleri ilk sürümde yok; önce ortaya çalışan bir şey çıksın. | 2026-11-07 |
 
 ## 3. Ödeme ve İptal
 
