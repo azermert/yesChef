@@ -8,9 +8,10 @@
 |---|---|---|
 | Ç1 | Önce neyin, nasıl yapılacağı konuşulur ve karar verilir; kod sonra yazılır. | 2026-11-06 |
 | Ç2 | Mert "yaz" demeden kod yazılmaz, commit atılmaz. | 2026-11-06 |
-| Ç3 | Her iş ayrı bir branch'te yapılır. Mert inceler, onaylarsa `main`'e merge edilir. `main`'e doğrudan commit atılmaz. | 2026-11-06 |
+| Ç3 | Her kod işi ayrı bir branch'te yapılır. Mert inceler, onaylarsa `main`'e merge edilir. `main`'e doğrudan kod commit'i atılmaz. | 2026-11-06 (09.11'de güncellendi, bkz. Ç6) |
 | Ç4 | Alınan kararlar bu dokümanda, yapılan / ertelenen işler `docs/ILERLEME.md`'de tutulur. | 2026-11-06 |
 | Ç5 | Her branch hazır olduğunda Claude, merge etme ve branch'i hem localde hem remote'ta silme komutlarını tek seferde verir. | 2026-11-06 |
+| Ç6 | Doküman güncellemeleri (`docs/`) ayrı branch açmadan doğrudan `main`'e yapılır. | 2026-11-09 |
 
 ## 2. Ürün
 
