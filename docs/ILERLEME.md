@@ -23,7 +23,8 @@
 - [x] Keşfet ekranını emülatörde test etmek (ilk migration eksikti, yeniden çalıştırılınca düzeldi)
 - [x] Şef profili ekranı kararları (P1–P5)
 - [ ] Bağlayıcılık için uygulamayı cazip kılacak özellikleri konuşmak (Ü12)
-- [ ] Şef profili ekranını kodlamak
+- [x] Şef profili ekranını kodlamak (branch: `feature/sef-profili`)
+- [ ] Şef profilini emülatörde test etmek
 - [ ] Sipariş ve özel talep akışını planlamak (P5)
 
 ## Ertelendi
@@ -37,5 +38,7 @@
 | Şef başvuru ve admin onay süreci | Sonra konuşulacak. |
 | Keşfet'te tarih ve kişi sayısı filtreleri | Şef takvimi gerektiriyor; ilk sürümden sonra (K9). |
 | Puan / iptal oranı hesaplamaları | Sipariş akışı netleşince. Test şeflerinde puanlar elle girildi. |
+| Favorilerin çalışması | Kalp ikonu var ama favori kaydı giriş gerektiriyor; giriş eklenince çalışacak (P4, T5). |
+| Sipariş ver / Özel talep gönder butonları | Şimdilik "yakında" mesajı veriyor; akış ayrıca planlanacak (P5). |
 | Telefon konumu (GPS) ile "yakınındaki" | Şimdilik "yakın" = seçilen ilçe şefin ilçesi veya hizmet bölgesi içinde. Konum izni sonra. |
 | Ne için aranıyor kategorileri (günlük / davet / özel gün) | Şef verisinde bu bilgi yok; şimdilik kategoriler mutfak türü. |
