@@ -24,7 +24,7 @@
 - [x] Şef profili ekranı kararları (P1–P5)
 - [ ] Bağlayıcılık için uygulamayı cazip kılacak özellikleri konuşmak (Ü12)
 - [x] Şef profili ekranını kodlamak (branch: `feature/sef-profili`)
-- [ ] Şef profilini emülatörde test etmek
+- [x] Şef profilini emülatörde test etmek
 - [ ] Sipariş ve özel talep akışını planlamak (P5)
 
 ## Ertelendi
