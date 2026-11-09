@@ -27,6 +27,8 @@
 | Ü8 | Şef olmak için profesyonel olma şartı yok. Başta seçici, manuel onay; uzun vadede puan ve yorumlar eleme yapar. | 2026-10-31 |
 | Ü9 | Şef profilinde özgeçmiş / hakkımda alanı bulunur. | 2026-10-31 |
 | Ü10 | Pazar: başlangıçta Ankara ve İstanbul. | 2026-10-31 |
+| Ü11 | Müşteri ile şef arasında serbest mesajlaşma yok. Mesajlaşma sadece bir talep veya sipariş içinde açılır (komisyonun dışarı kaçmasını zorlaştırmak için). | 2026-11-09 |
+| Ü12 | **Bağlayıcılık ilkesi:** Taraflar eninde sonunda iletişim bilgisi paylaşabilir; bu tamamen engellenemez. Bu yüzden asıl çözüm yasak değil, uygulamanın cazibesidir: uygulama üzerinden çalışmak hem müşteriye hem şefe telefonla iş halletmekten daha kolay ve avantajlı olmalı. | 2026-11-09 |
 
 ### Keşfet Ekranı
 
@@ -41,6 +43,16 @@
 | K7 | Filtreler (arama çubuğu yanındaki "Filtrele" butonunda): mutfak türü · hizmet şekli (evime gelsin / getirsin / gidip alayım) · malzeme (ben alırım / şef alsın) · sipariş tipi (hazır menü / özel talep) · kişi başı fiyat aralığı. | 2026-11-07 |
 | K8 | Sıralama: Önerilen (varsayılan; puan, yakınlık ve tamamlanma oranının karışımı) · En yüksek puan · En yakın · En düşük fiyat. | 2026-11-07 |
 | K9 | Tarih ("o gün müsait olanlar") ve kişi sayısı filtreleri ilk sürümde yok; önce ortaya çalışan bir şey çıksın. | 2026-11-07 |
+
+### Şef Profili Ekranı
+
+| # | Karar | Tarih |
+|---|---|---|
+| P1 | Profil yukarıdan aşağıya: üst kısım (fotoğraf, ad, ilçe, puan, "Yeni şef" etiketi, mutfak türleri) → güven bilgisi (tamamlanan sipariş oranı; tıklanınca iptaller ve mazeretler) → çalışma şekli (hizmet yeri, teslimat ve ücreti, malzeme, hizmet ilçeleri) → hakkımda → menüler → galeri → yorumlar. | 2026-11-09 |
+| P2 | Menü kartında başlık, içerik ve kişi başı fiyat (malzemeli / malzemesiz) bulunur. Menüye tıklanınca detayı açılır; "Sipariş ver" oradan başlar. | 2026-11-09 |
+| P3 | Şef özel talep kabul ediyorsa altta sabit "Özel talep gönder" butonu bulunur. | 2026-11-09 |
+| P4 | Şef kalp ikonuyla favorilere eklenebilir. | 2026-11-09 |
+| P5 | Sipariş ve özel talep akışı (tarih, kişi sayısı, adres, ödeme) ayrı bir konu olarak sonra planlanacak. Profil ekranında şimdilik sadece butonlar olur. | 2026-11-09 |
 
 ## 3. Ödeme ve İptal
 

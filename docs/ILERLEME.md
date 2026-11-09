@@ -21,7 +21,10 @@
 
 - [x] Keşfet ekranı kararları (K1–K9)
 - [x] Keşfet ekranını emülatörde test etmek (ilk migration eksikti, yeniden çalıştırılınca düzeldi)
-- [ ] Şef profili ekranını konuşmak
+- [x] Şef profili ekranı kararları (P1–P5)
+- [ ] Bağlayıcılık için uygulamayı cazip kılacak özellikleri konuşmak (Ü12)
+- [ ] Şef profili ekranını kodlamak
+- [ ] Sipariş ve özel talep akışını planlamak (P5)
 
 ## Ertelendi
 
